@@ -10,12 +10,10 @@ mixpanel.init("8c1bc97d7bc0b91017760e446f79e022", {
 
 //index.html shop it now button tracking
 jQuery(".shopitnow").click(function(){
-  alert("hi shop it now");
   mixpanel.track("Button",{"buttonname": "SHOP IT NOW"});
 })
   
 //index.html view all products button tracking
 jQuery(".viewallproducts").click(function(){
-  alert("hi viewallproducts");
   mixpanel.track("Button",{"buttonname": "View all products"});
 })
