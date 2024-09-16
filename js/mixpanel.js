@@ -13,3 +13,9 @@ jQuery(".shopitnow").click(function(){
   alert("hi shop it now");
   mixpanel.track("Button",{"buttonname": "SHOP IT NOW"});
 })
+  
+//index.html view all products button tracking
+jQuery(".viewallproducts").click(function(){
+  alert("hi viewallproducts");
+  mixpanel.track("Button",{"buttonname": "View all products"});
+})
