@@ -10,6 +10,6 @@ mixpanel.init("8c1bc97d7bc0b91017760e446f79e022", {
 
 //index.html shop it now button tracking
 jQuery(".shopitnow").click(function(){
-  console.log("hi shop it now");
+  alert("hi shop it now");
   mixpanel.track("Button",{"buttonname": "SHOP IT NOW"});
 })
