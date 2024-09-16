@@ -7,3 +7,8 @@ mixpanel.init("8c1bc97d7bc0b91017760e446f79e022", {
   track_pageview: true,
   persistence: "localStorage",
 });
+
+//index.html shop it now button tracking
+function shopitnow(){
+  mixpanel.track("Button",{"buttonname": "SHOP IT NOW"});
+}
