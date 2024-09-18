@@ -17,3 +17,8 @@ jQuery(".shopitnow").click(function(){
 jQuery(".viewallproducts").click(function(){
   mixpanel.track("Button",{"buttonname": "View all products"});
 })
+
+//login button tracking
+jQuery(".icon-user").click(function(){
+  mixpanel.track("Button",{"buttonname": "Login"});
+})
