@@ -76,3 +76,13 @@ jQuery(".icon-search").click(function(){
     {"Search Keyword": keyword}
 );
 })
+
+//banner click
+jQuery(".banner").click(function(){
+  var bannertitle = jQuery(this).closest('.product-entry').find('.item-title').text();
+  mixpanel.track(
+    "Banner Click",
+    {"Banner Title": bannertitle}
+);
+})
+
