@@ -22,3 +22,31 @@ jQuery(".viewallproducts").click(function(){
 jQuery(".icon-user").click(function(){
   mixpanel.track("Button",{"buttonname": "Login"});
 })
+
+//contact-us button tracking
+jQuery(".contact-us").click(function(){
+  mixpanel.track("Button",{"buttonname": "Contact Us"});
+})
+
+//add to cart button tracking
+jQuery(".cart-link").click(function(){
+  var productname = jQuery(this).closest('.product-item').find('.product-detail a').text();
+  var productprice = jQuery(this).closest('.product-item').find('.item-price').text();
+  mixpanel.track(
+    "Add to cart",
+    {"product name": productname,
+    "product price" : productprice}
+);
+})
+
+//wishlist button tracking
+jQuery(".wishlist-btn").click(function(){
+  var productname = jQuery(this).closest('.product-item').find('.product-detail a').text();
+  var productprice = jQuery(this).closest('.product-item').find('.item-price').text();
+  mixpanel.track(
+    "Add to wishlist",
+    {"product name": productname,
+    "product price" : productprice}
+);
+})
+
