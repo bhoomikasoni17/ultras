@@ -50,3 +50,29 @@ jQuery(".wishlist-btn").click(function(){
 );
 })
 
+//blog page clicked article
+jQuery(".post-item").click(function(){
+  var articlename = jQuery(this).find('.post-title').text().trim();
+  mixpanel.track(
+    "Article viewed",
+    {"Article name": articlename}
+);
+})
+
+//nav click
+jQuery(".item-anchor").click(function(){
+  var navName = jQuery(this).text();
+  mixpanel.track(
+    "Navigation link",
+    {"Nav name": navName}
+);
+})
+
+//search click
+jQuery(".icon-search").click(function(){
+  var keyword = document.querySelector("s");
+  mixpanel.track(
+    "Search",
+    {"Search Keyword": keyword}
+);
+})
